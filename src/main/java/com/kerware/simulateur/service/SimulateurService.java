@@ -56,6 +56,30 @@ public class SimulateurService {
         this.impBrutFoyer = impotNet;
     }
 
+    public int getRev1() {
+        return rev1;
+    }
+
+    public int getRev2() {
+        return rev2;
+    }
+
+    public int getNbEnf() {
+        return nbEnf;
+    }
+
+    public int getNbEnfH() {
+        return nbEnfH;
+    }
+
+    public long getImpBrutFoyer() {
+        return impBrutFoyer;
+    }
+
+    public DecoteService getDecoteService() {
+        return decoteService;
+    }
+
     public double getAbattement() { return abattement; }
     public double getRevenuFiscal() { return revenuFiscal; }
     public long getContribExceptionnelle() { return contribEx; }
