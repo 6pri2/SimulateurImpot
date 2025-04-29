@@ -1,5 +1,7 @@
 package com.kerware.simulateur;
 
+import com.kerware.simulateur.model.SituationFamiliale;
+
 /**
  *  Cette classe permet de simuler le calcul de l'impôt sur le revenu
  *  en France pour l'année 2024 sur les revenus de l'année 2023 pour

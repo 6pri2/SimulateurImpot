@@ -1,5 +1,7 @@
 package com.kerware.simulateur;
 
+import com.kerware.simulateur.model.SituationFamiliale;
+
 public class AdaptateurSimulateur implements ICalculateurImpot {
 
     private Simulateur simulateur = new Simulateur();

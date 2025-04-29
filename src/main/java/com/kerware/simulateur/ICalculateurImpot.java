@@ -1,5 +1,7 @@
 package com.kerware.simulateur;
 
+import com.kerware.simulateur.model.SituationFamiliale;
+
 public interface ICalculateurImpot {
 
     public void setRevenusNetDeclarant1( int rn );
