@@ -1,0 +1,6 @@
+revenuNetDecl1,revenuNetDecl2,sitFam,nbEnfants,nbEnfantsHandicap,parentIsole,partsAttendues
+30000,0,CELIBATAIRE,0,0,false,1.0
+0,0,MARIE,2,0,false,3.0
+50000,0,DIVORCE,3,1,true,4.0
+25000,0,VEUF,1,0,true,3.0
+0,0,PACSE,0,0,false,2.0

@@ -1,0 +1,4 @@
+revenu1,revenu2,situation,enfants,expectedRev1,expectedRev2,expectedRefFiscale,expectedAvantDecote,expectedDecote,expectedContrib
+0,0,CELIBATAIRE,0,0,0,0,0,0,0.0
+30000,0,CELIBATAIRE,1,30000,0,27000,1106,373,0
+50000,50000,MARIE,3,50000,50000,90000,6536,0,0

@@ -1,4 +1,4 @@
-package com.kerware.simulateur.config;
+package com.kerware.modelrefac.config;
 
 public class Constantes {
 
@@ -12,6 +12,7 @@ public class Constantes {
     public static final int ABATTEMENT_MAX = 14171;
     public static final int ABATTEMENT_MIN = 495;
     public static final double TAUX_ABATTEMENT = 0.1;
+    public static final double MOITIE = 0.5;
 
     public static final double PLAFOND_DEMI_PART = 1759;
     public static final double SEUIL_DECOTE_SEUL = 1929;

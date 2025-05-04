@@ -1,6 +1,6 @@
 package com.kerware.simulateur;
 
-import com.kerware.simulateur.model.SituationFamiliale;
+import com.kerware.modelrefac.model.SituationFamiliale;
 
 /**
  *  Cette classe permet de simuler le calcul de l'impôt sur le revenu

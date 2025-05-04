@@ -1,6 +1,6 @@
 package com.kerware.simulateur;
 
-import com.kerware.simulateur.model.SituationFamiliale;
+import com.kerware.modelrefac.model.SituationFamiliale;
 
 public interface ICalculateurImpot {
 

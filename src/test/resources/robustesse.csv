@@ -1,0 +1,8 @@
+revenuNetDecl1,revenuNetDecl2,sitFam,nbEnfants,nbEnfantsHandicap,parentIsole
+-1000,0,CELIBATAIRE,0,0,false
+0,-500,CELIBATAIRE,0,0,false
+50000,0,INVALID_SITUATION,0,0,false
+0,0,NULL,0,0,false
+50000,0,MARIE,-1,0,false
+50000,0,MARIE,0,-1,false
+0,0,CELIBATAIRE,-2,3,true

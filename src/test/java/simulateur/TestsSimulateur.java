@@ -2,7 +2,7 @@ package simulateur;
 
 import com.kerware.simulateur.AdaptateurSimulateur;
 import com.kerware.simulateur.ICalculateurImpot;
-import com.kerware.simulateur.model.SituationFamiliale;
+import com.kerware.modelrefac.model.SituationFamiliale;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;

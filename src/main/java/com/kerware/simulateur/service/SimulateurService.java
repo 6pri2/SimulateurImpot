@@ -1,10 +1,10 @@
-package com.kerware.simulateur.service;
+package com.kerware.modelrefac.service;
 
-import com.kerware.simulateur.config.Constantes;
-import com.kerware.simulateur.model.SituationFamiliale;
-import com.kerware.simulateur.util.ValidationUtil;
+import com.kerware.modelrefac.config.Constantes;
+import com.kerware.modelrefac.model.SituationFamiliale;
+import com.kerware.modelrefac.util.ValidationUtil;
 
-public class SimulateurService {
+public final class SimulateurService {
     private int rev1, rev2, nbEnf, nbEnfH;
     private SituationFamiliale sit;
     private boolean parentIso;
@@ -21,7 +21,8 @@ public class SimulateurService {
         ValidationUtil.checkNonNegative(r2, "Revenu 2 négatif");
         this.rev1 = r1; this.rev2 = r2;
     }
-    public void setSituation(SituationFamiliale s) { ValidationUtil.checkNotNull(s, "Situation nulle"); this.sit = s; }
+    public void setSituation(SituationFamiliale s) { 
+        ValidationUtil.checkNotNull(s, "Situation nulle"); this.sit = s; }
     public void setEnfants(int enfants, int enfantsH) {
         ValidationUtil.checkNonNegative(enfants, "Nb enfants négatif");
         ValidationUtil.checkNonNegative(enfantsH, "Nb enfants handicapés négatif");
@@ -30,13 +31,16 @@ public class SimulateurService {
     public void setParentIsole(boolean pi) { this.parentIso = pi; }
 
     public void calculate() {
+        double demi = Constantes.MOITIE;
         // Abattement
         abattement = abtService.calculate(rev1, rev2, sit);
         revenuFiscal = rev1 + rev2 - abattement;
-        if (revenuFiscal < 0) revenuFiscal = 0;
+        if (revenuFiscal < 0){revenuFiscal = 0;}
         // Parts
-        int partsDecl = (sit == SituationFamiliale.MARIE || sit == SituationFamiliale.PACSE) ? 2 : 1;
-        double parts = partsDecl + nbEnf * 0.5 + (nbEnf>2 ? (nbEnf-2)*1.0 : 0) + nbEnfH*0.5 + (parentIso && nbEnf>0 ? 0.5:0);
+        int partsDecl = (sit == SituationFamiliale.MARIE ||
+         sit == SituationFamiliale.PACSE) ? 2 : 1;
+        double parts = partsDecl + nbEnf * demi + (nbEnf>2 ?
+         (nbEnf-2)*1.0 : 0) + nbEnfH* demi + (parentIso && nbEnf>0 ? demi :0);
 
         // Contribution exceptionnelle
         contribEx = ceService.calculate(revenuFiscal, partsDecl==2);
@@ -47,8 +51,9 @@ public class SimulateurService {
 
         // Plafonnement
         double diffPts = parts - partsDecl;
-        double plafond = (diffPts/0.5) * Constantes.PLAFOND_DEMI_PART;
-        if (impBrutDecl - impBrutFoyer > plafond) impBrutFoyer = Math.round(impBrutDecl - plafond);
+        double plafond = (diffPts/demi) * Constantes.PLAFOND_DEMI_PART;
+        if (impBrutDecl - impBrutFoyer > plafond)
+        {impBrutFoyer = Math.round(impBrutDecl - plafond);} 
 
         // Décote
         decote = decoteService.apply(impBrutFoyer, partsDecl);
