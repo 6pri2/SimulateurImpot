@@ -1,6 +1,6 @@
 Pour réaliser ce projet, nous sommes parti du code initial fourni, que nous avons progressivement restructuré en suivant une architecture modulaire et orientée service.
-Nous avons  d’abord isolé les constantes fiscales dans un package config pour centraliser les barèmes et faciliter les mises à jour. 
-Ensuite, Nous avons  créé les modèles de données (model). Nous avons  poursuivi avec la mise en place du service d’abattement (AbattementService) pour gérer les déductions fiscales. 
+Nous avons  d’abord isolé les constantes dans un package config pour centraliser les barèmes et faciliter les mises à jour. 
+Ensuite, Nous avons  créé le modèle de données (model). Nous avons  poursuivi avec la mise en place du service d’abattement (AbattementService) pour gérer les déductions fiscales. 
 Puis, Nous avons  implémenté successivement les services de calcul de la contribution sociale (ContributionService), du montant brut de l’impôt (ImpotService) 
 et de la décote (DecoteService). Ces services ont été intégrés dans un orchestrateur principal appelé SimulateurService, centralisant la logique métier.
 Enfin, Nous avons  introduit un adaptateur (AdaptateurSimulateur) respectant l’interface fournie (ICalculateurImpot) pour connecter notre simulateur au système existant.
