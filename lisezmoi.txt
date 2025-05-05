@@ -1,0 +1,12 @@
+Pour réaliser ce projet, nous sommes parti du code initial fourni, que nous avons progressivement restructuré en suivant une architecture modulaire et orientée service.
+Nous avons  d’abord isolé les constantes fiscales dans un package config pour centraliser les barèmes et faciliter les mises à jour. 
+Ensuite, Nous avons  créé les modèles de données (model). Nous avons  poursuivi avec la mise en place du service d’abattement (AbattementService) pour gérer les déductions fiscales. 
+Puis, Nous avons  implémenté successivement les services de calcul de la contribution sociale (ContributionService), du montant brut de l’impôt (ImpotService) 
+et de la décote (DecoteService). Ces services ont été intégrés dans un orchestrateur principal appelé SimulateurService, centralisant la logique métier.
+Enfin, Nous avons  introduit un adaptateur (AdaptateurSimulateur) respectant l’interface fournie (ICalculateurImpot) pour connecter notre simulateur au système existant.
+Par la suite, nous avons rédigé deux nouveaux fichiers de test : SimulateurImpotTest et SimulateurServiceTest. Le fichier SimulateurImpotTest sert à tester AdaptateurSimulateur.
+Ensuite le fichier SimulateurServiceTest sert à tester le modéle qui nous a permis de séparer les différentes fonctionnalités du simulateur. De plus nous avons décider d'alimenter
+nos fichiers de test grâce à plusieurs fichier csv pour plus de practicité.
+
+De plus pour information, nous avons décidé de laisser les fichiers du simulateur qui nous a servi de modéle. C'est pour cela que dans le check style il ya encore des warnings.
+Ils proviennent que du fichier Simulateur.java.
