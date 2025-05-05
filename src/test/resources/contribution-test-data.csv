@@ -1,0 +1,6 @@
+revenuFiscal,isCouple,expected
+200000,false,0   
+300000,false,1500  
+600000,true,3000   
+0,false,0            
+1200000,true,23000 

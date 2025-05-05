@@ -172,7 +172,7 @@ public class SimulateurImpotTest {
         assertEquals(expectedContrib, calculateur.getContribExceptionnelle(), 0.01);
     }
 
-    // Ajouter ce bloc MethodSource pour les cas complexes
+    // bloc MethodSource pour les cas complexes
     static Stream<Arguments> provideComplexCasesForGetters() {
         return Stream.of(
             Arguments.of(30000, 35000, "MARIE", 2, 30000, 35000, 58500, 2708, 219, 0),

@@ -1,0 +1,4 @@
+rev1,rev2,situation,nbEnf,nbEnfH,parentIso,expectedAbattement,expectedRevenuFiscal,expectedContribEx,expectedImpBrutFoyer,expectedDecote,expectedImpotNet
+50000,60000,MARIE,2,0,false,11000.0,99000.0,0,12345,0,12754
+0,0,CELIBATAIRE,0,0,false,495,0.0,0,0,0,0
+30000,0,MARIE,3,1,true,3495.0,26505.0,0,1500,0,0
